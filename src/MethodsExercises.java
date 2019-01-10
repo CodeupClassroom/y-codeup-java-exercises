@@ -10,8 +10,29 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-        int x = getInt(1, 100);
-        System.out.println(x);
+        int result = factorial(17);
+        System.out.println(result);
+    }
+
+
+    public static int factorial(int number) {
+        int result = 1;
+
+        do {
+            result *= number;
+            number--;
+        } while(number >= 1);
+
+        return result;
+
+    }
+
+    public static boolean userWantsToContinue() {
+        Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Do you want to continue? Type y or yes");
+        String answer = scan.next();
+        boolean willContinue = answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes");
+        return willContinue;
     }
 
     public static int getInt() {
@@ -74,7 +95,6 @@ public class MethodsExercises {
 
         return product;
     }
-
 
 
     // create an add method that works with integers, doubles, and longs
