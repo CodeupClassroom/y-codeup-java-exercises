@@ -76,7 +76,6 @@ public class MethodDemo {
     }
 
     public static long getPower(int base, int exponent) {
-        System.out.println("Exponent at this stage: " + exponent);
         if (exponent == 0) {
             return 1;
         } else if (exponent == 1) {
@@ -85,6 +84,16 @@ public class MethodDemo {
             return base * base;
         }
         return base * getPower(base, exponent - 1);
+    }
+
+    public static int getOne(int number) {
+        if(number > 1) {
+            return getOne(number -1);
+        } else if(number < 1) {
+            return getOne(number + 1);
+        } else {
+            return number; // because the number is 1.
+        }
     }
 
 
