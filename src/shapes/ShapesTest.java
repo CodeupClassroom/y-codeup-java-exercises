@@ -3,14 +3,14 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args) {
 
-        Rectangle box1 = new Rectangle(14, 55);
-        box1.getInfo();
+        Measurable shape;
 
-        // if all squares are rectangles then we can store a square object in a rectangle typed variable
-        Rectangle box2 = new Square(5);
-        box2.getInfo();
+        shape = new Square(4);
+        System.out.println("Area: " + shape.getArea());
+        System.out.println("Perimeter: " + shape.getPerimeter());
 
-        Rectangle box3 = new Square(12);
-        box3.getInfo();
+        Measurable myShape = new Rectangle(10, 17);
+        System.out.println("Area: " + myShape.getArea());
+        System.out.println("Perimeter: " + myShape.getPerimeter());
     }
 }
