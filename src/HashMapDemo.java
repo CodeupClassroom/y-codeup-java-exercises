@@ -54,6 +54,7 @@ public class HashMapDemo {
 
             employees.put("Accounting", accounting);
 
+
             ArrayList<Person> developers = new ArrayList<>();
             developers.add(new Person("Dorian"));
             developers.add(new Person("Nathaniel"));
@@ -67,7 +68,6 @@ public class HashMapDemo {
             for(String department : employees.keySet()) {
                 System.out.println(department);
             }
-
 
         }
 }
