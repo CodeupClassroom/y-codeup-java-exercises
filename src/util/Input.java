@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -21,7 +22,22 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        // we need to gracefully handle exceptions
+        String userInput;
+
+        try {
+            // get input from the user
+            // parse the input string as an integer
+            // if valid, return the input
+            userInput = scanner.next();
+            return Integer.valueOf(userInput);
+
+        } catch (Exception e) {
+            // catch runs if the "try" code throws an exception
+            System.out.println("Please make sure your input is a valid integer using numerals");
+            return getInt();
+        }
+
     }
 
     public int getInt(String prompt) {
@@ -54,7 +70,16 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        String userInput;
+
+        try {
+            userInput = scanner.next();
+            return Double.valueOf(userInput);
+
+        } catch (Exception e) {
+            System.out.println("Please input a valid double");
+            return getDouble();
+        }
     }
 
     public double getDouble(String prompt) {

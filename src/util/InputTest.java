@@ -11,12 +11,6 @@ public class InputTest {
 
         }
 
-        if(input.yesNo("Do you want to exit the application?")) {
-            System.exit(0);
-        }
-
-        String name = input.getString("What is your name?");
-        System.out.println("Hello, " + name + "!");
 
     }
 }
