@@ -82,7 +82,7 @@ public class GroceryList {
         }
 
 //         assigns lines to hold all of the strings already in the file
-        List<String> lines = Files.readAllLines(oiPaths.get(directory, filename));
+        List<String> lines = Files.readAllLines(Paths.get(directory, filename));
 
         String item = input.getString("Please input the new item to get at the store:");
 
